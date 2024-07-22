@@ -1,0 +1,5 @@
+jupyterlab>=4,<5
+opinionated>=0.0.3,<0.0.4
+polars>=1,<2
+pre-commit>=3,<4
+seaborn>=0.13,<0.14
