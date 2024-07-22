@@ -12,9 +12,8 @@ pip install -r requirements.txt
 
 ## Downloading Data
 
-The easiest mechanism we have for sharing the data is via GDrive.
-
-GDrive link: []()
+The easiest mechanism we have for sharing the data is via GDrive:
+[link](https://drive.google.com/drive/folders/14b6KyQqVB4ToqhIavfhssVr8QFrp2QY6?usp=sharing)
 
 ### With Just
 
