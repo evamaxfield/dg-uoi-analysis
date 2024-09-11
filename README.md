@@ -2,7 +2,7 @@
 
 ## Setup
 
-### Installing Dependencies
+**Use Python 3.11 or 3.12.**
 
 ```bash
 pip install -r requirements.txt
