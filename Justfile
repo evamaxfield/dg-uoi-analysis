@@ -25,8 +25,3 @@ install:
 # lint, format, and check all files
 lint:
 	pre-commit run --all-files
-
-# unpack dataset archive
-unpack-archive file:
-  mkdir -p data
-  tar -xvzf {{ file }}

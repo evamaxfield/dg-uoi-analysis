@@ -12,36 +12,24 @@ pip install -r requirements.txt
 
 ## Downloading Data
 
-The easiest mechanism we have for sharing the data is via GDrive:
-[link](https://drive.google.com/drive/folders/14b6KyQqVB4ToqhIavfhssVr8QFrp2QY6?usp=sharing)
+After installing the required dependencies, you can download each dataset with: 
+`python download.py <dataset-name>`
 
-### With Just
+For example: `python download.py per-day-pkg-releases-metrics-one-year`
 
-The data management can be handled for you with:
-`just unpack-data <path-to-downloaded-file>`
+This will create an `archives` directory with the downloaded archive file
+and a `data` directory with the extracted data.
 
-For example:
+All of the notebooks are configured to look for the correct
+set of data files in the `data` directory by default so you should not need to
+change any of the data reading configuration in the notebooks.
 
-`just unpack-data ~/Downloads/per-day-pkg-releases-metrics.tar.gz`
+### Available Datasets
 
-### Manually
-
-Untar the downloaded file and place the data in the `data` directory.
-
-```
-data
-└── per-day-pkg-releases-metrics
-    ├── 2020-02-07.parquet
-    ├── 2020-02-08.parquet
-    ├── 2020-02-09.parquet
-    ├── 2020-02-10.parquet
-    ├── 2020-02-11.parquet
-    ├── 2020-02-12.parquet
-    ├── 2020-02-13.parquet
-    ├── 2020-02-14.parquet
-    ├── 2020-02-15.parquet
-    ...
-```
+- `per-day-pkg-releases-metrics-one-year`
+- `per-day-pkg-releases-metrics-two-year`
+- `per-day-pkg-releases-metrics-six-months`
+- `per-day-release-content-metrics-one-year-rated`
 
 ## Development
 
@@ -49,9 +37,8 @@ You can lint and format your notebooks via [just](https://github.com/casey/just)
 
 ```
 Available recipes:
-    clean               # clean all generated build, python, and lint files
-    default             # list all available commands
-    install             # install with all deps
-    lint                # lint, format, and check all files
-    unpack-archive file # unpack dataset archive
+    clean   # clean all generated build, python, and lint files
+    default # list all available commands
+    install # install with all deps
+    lint    # lint, format, and check all files
 ```
