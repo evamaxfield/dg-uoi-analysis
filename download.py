@@ -38,6 +38,7 @@ app = typer.Typer()
 
 ###############################################################################
 
+
 @app.command()
 def download_and_extract_data(
     dataset_name: str,
@@ -48,7 +49,7 @@ def download_and_extract_data(
             f"Dataset {dataset_name} not found. "
             f"Valid dataset names are: {list(DATASET_NAME_TO_GID_LUT.keys())}."
         )
-    
+
     # Get dataset gid
     dataset_gid = DATASET_NAME_TO_GID_LUT[dataset_name]
 
